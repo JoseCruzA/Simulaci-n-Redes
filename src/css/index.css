@@ -1,0 +1,126 @@
+html, body, .container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-image: url('../assets/earth.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body.has-modal {
+    backdrop-filter: blur(4px);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    background-color: #0B9B9B;
+    color: #FFFFFF;
+    padding: 15px;
+    border-radius: 30px;
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    transform: scale(1);
+    animation: clickme 2s infinite;
+}
+
+.modal {
+    display: none;
+}
+
+.modal-active {
+    display: block;
+    border-radius: 15px;
+    background-color: #000000;
+    color: #FFFFFF;
+    position: absolute;
+    box-shadow: 0px 0px 11px 4px rgba(255, 255, 255, 0.7);
+}
+
+.modal-header {
+    text-align: center;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.modal-body {
+    padding: 30px 50px;
+}
+
+.delete:after, .delete:before {
+    background-color: #FFF;
+    content: "";
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform-origin: center center;
+}
+
+.delete {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    user-select: none;
+    background-color: #0A0A0A33;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    pointer-events: auto;
+    display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: 0;
+    height: 20px;
+    max-height: 20px;
+    min-height: 20px;
+    outline: none;
+    position: absolute;
+    vertical-align: top;
+    width: 20px;
+    top: 10px;
+    right: 10px;
+}
+
+.delete:before {
+    height: 2px;
+    width: 50%;
+}
+
+.delete:after {
+    height: 50%;
+    width: 2px;
+}
+
+.no-weight {
+    font-weight: normal;
+    opacity: 0.7;
+}
+
+@keyframes clickme {
+    0% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(11, 155, 156, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(11, 155, 156, 0);
+    }
+
+    100% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(11, 155, 156, 0);
+    }
+}

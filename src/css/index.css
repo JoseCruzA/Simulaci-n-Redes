@@ -38,7 +38,7 @@ body.has-modal {
     display: none;
 }
 
-.modal-active {
+.modal.active {
     display: block;
     border-radius: 15px;
     background-color: #000000;

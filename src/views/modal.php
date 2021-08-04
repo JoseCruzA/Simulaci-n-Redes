@@ -2,7 +2,7 @@
     <div class="modal-content">
         <div class="modal-header">
             <h1>Connection Info</h1>
-            <button class="delete" aria-label="close"></button>
+            <button class="delete" aria-label="close" onclick="closeModal()"></button>
         </div>
         <div class="modal-body">
             <h3>
